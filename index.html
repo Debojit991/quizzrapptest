@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adaptive Quiz - BOARDSHELP</title>
+  <link rel="stylesheet" href="style.css"/>
+  
+
+</head>
+<body>
+  <div class="container">
+    
+   <div class="header-bar">
+  <div class="profile-section">
+    <img src="https://lh3.googleusercontent.com/a/ACg8ocLCOgbsyjItt1PuYOiwGHlNtorezdz6UM7l26Rx65U5H7KmA02vjA=s96-c" alt="Profile" class="profile-pic" />
+    <div class="greeting">
+      <span>Hey,</span> <strong>Debojit Das!</strong>
+    </div>
+    <div class="category-dropdown">
+      <select id="categorySelect" aria-label="Select Category">
+        <option value="engineering" selected>Engineering</option>
+        <option value="medical">Medical</option>
+        <option value="others">School Level</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+
+<h1> Quizzr AI</h1>
+
+<div class="form-box">
+  <label for="subject">Choose Subject:</label>
+  <select id="subject">
+    <option value="">--Select--</option>
+    <option value="Physics">Physics</option>
+    <option value="Math">Math</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="English">English</option>
+    <option value="Biology">Biology</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="History">History</option>
+    <option value="Geography">Geography</option>
+  
+
+  </select>
+
+  <label for="topic">Enter Topic:</label>
+  <input type="text" id="topic" placeholder="e.g. Newton’s Laws" />
+
+  <label for="numQuestions">Number of Questions:</label>
+  <select id="numQuestions">
+    <option value="5">5</option>
+    <option value="10" selected>10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="50">50</option>
+  </select>
+
+  <label for="test-time">Test Time (in minutes):</label>
+<input type="number" id="customTime" placeholder=" 20" min="1" />
+
+
+
+  <label for="classSelect">Choose Class:</label>
+  <select id="classSelect">
+    <option value="">--Select Class--</option>
+    <option value="6">Class 6</option>
+    <option value="7">Class 7</option>
+    <option value="8">Class 8</option>
+    <option value="9">Class 9</option>
+    <option value="10">Class 10</option>
+    <option value="11">Class 11</option>
+    <option value="12">Class 12</option>
+    <option value="ug">UnderGrads</option>
+    <option value="pg">PostGrads</option>
+    <option value="conceptual">Conceptual</option>
+  </select>
+  <label for="difficulty">Select Difficulty Level:</label>
+<select id="difficulty">
+  <option value="">--Select Difficulty--</option>
+  <option value="easy">Easy</option>
+  <option value="medium">Medium</option>
+  <option value="hard">Hard</option>
+  <option value="mixed">Mixed</option>
+</select>
+<button id="startBtn">Start Quiz</button>
+ <!-- Test Preview Popup -->
+<div id="testPreviewPopup" class="test-preview hidden">
+  <div class="test-card">
+    <h2>Test Preview</h2>
+    <div class="test-meta">
+      <p><strong>Subject:</strong> <span id="previewSubject"></span></p>
+      <p><strong>Topic:</strong> <span id="previewTopic"></span></p>
+      <p><strong>Category:</strong> <span id="previewCategory"></span></p>
+      <p><strong>Class:</strong> <span id="previewClass"></span></p>
+      <p><strong>Questions:</strong> <span id="previewQuestions"></span></p>
+      <p><strong>Time:</strong> <span id="previewTime"></span> minutes</p>
+      <p><strong>Difficulty:</strong> <span id="previewDifficulty"></span></p>
+    </div>
+    <div class="button-row">
+      <button id="confirmStartBtn">Start Test</button>
+      <button id="closePreviewBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+<div class="footer-branding">
+        QUIZ CARD AI⚡ by
+        <a
+          href="https://wa.me/916290259296?text=Hi%20Debojit
+"
+          target="_blank"
+          >Debojit</a
+        >
+        | <a>©2025</a>
+      </div>
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

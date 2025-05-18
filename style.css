@@ -1,0 +1,391 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container Box */
+.container {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  max-width: 650px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Headings */
+.container h1, .container h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #006064;
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+
+/* Form elements */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #004d40;
+  margin-top: 20px;
+}
+
+select, input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border: 2px solid #b2ebf2;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+  color: #004d40;
+  background-color: #f9fdfd;
+}
+
+select:focus, input:focus {
+  border-color: #00acc1;
+  background-color: #e0f7fa;
+}
+
+/* Recommended time input readonly style */
+#recommendedTime {
+  background-color: #e0f7fa;
+  color: #006064;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* Button */
+button {
+  width: 100%;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 25px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #008ba3;
+}
+
+/* Header Bar */
+.header-bar {
+  background-color: #ffffff; /* White background */
+  color: #006064; /* Teal-ish dark text */
+  padding: 14px 25px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #b2ebf2;
+}
+
+/* Profile Side */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #00bcd4;
+}
+
+.greeting span {
+  font-size: 16px;
+  color: #007c91;
+  font-weight: 600;
+}
+
+.greeting strong {
+  font-size: 18px;
+  color: #004d40;
+  font-weight: 700;
+}
+
+.category-dropdown select {
+  background: #e0f7fa;
+  color: #006064;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  min-width: 140px;
+  outline: none;
+  box-shadow: 0 0 0 1.5px #00bcd4 inset;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23006064" height="10" viewBox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px 12px;
+}
+
+.category-dropdown select:hover {
+  background-color: #b2ebf2;
+}
+
+.category-dropdown select:focus {
+  box-shadow: 0 0 0 2.5px #008ba3 inset;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#recommended-note {
+  font-size: 0.85em;
+}
+
+
+/*preview code fcking hell!! imma cry now */
+.test-preview {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.test-preview.hidden {
+  display: none;
+}
+
+.test-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.test-meta p {
+  margin: 10px 0;
+}
+
+.button-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-row button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#confirmStartBtn {
+  background-color: #00bcd4;
+  color: white;
+}
+
+#closePreviewBtn {
+  background-color: #f44336;
+  color: white;
+}
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.theme-label {
+  font-size: 14px;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 70px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #444;
+}
+
+.theme-toggle .icon {
+  font-size: 16px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.theme-toggle .slider {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: #2196F3;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.theme-toggle.dark .slider {
+  left: calc(100% - 30px); /* 70 - 28 - 2px margin */
+}
+
+ .footer-branding {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #555;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .footer-branding a {
+        color: #00796b;
+        text-decoration: none;
+      }
+      /* --- Animated Hover & Focus Effects --- */
+
+/* Inputs and Selects - animate border, background, and box-shadow on hover and focus */
+select:hover, input:hover,
+select:focus, input:focus {
+  border-color: #00acc1;
+  background-color: #d0f0f8;
+  box-shadow: 0 0 8px rgba(0, 172, 193, 0.5);
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+/* Smooth placeholder fade-in on focus */
+select::placeholder,
+input::placeholder {
+  color: #88c9d4;
+  transition: color 0.3s ease;
+}
+select:focus::placeholder,
+input:focus::placeholder {
+  color: #4db6c6;
+}
+
+/* Buttons - subtle scale up and shadow on hover */
+button:hover {
+  background: #008ba3;
+  box-shadow: 0 6px 12px rgba(0, 139, 163, 0.6);
+  transform: scale(1.05);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Category Dropdown - animate background color & shadow */
+.category-dropdown select:hover {
+  background-color: #b2ebf2;
+  box-shadow: 0 0 8px #00bcd4;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-dropdown select:focus {
+  box-shadow: 0 0 0 3px #008ba3 inset;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Profile pic hover - scale & shadow */
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00bcd4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Greeting span and strong - subtle color shift on hover */
+.greeting span:hover, .greeting strong:hover {
+  color: #008ba3;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+/* Theme toggle slider - animate smoothly */
+.theme-toggle .slider {
+  transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add a gentle bounce animation on button click */
+button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* Placeholder animations for input/select */
+/* Note: Placeholder styling is inconsistent on select in some browsers, but this should work on inputs */
+input::placeholder {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+input:focus::placeholder {
+  opacity: 0.4;
+}
+
+/* Smooth dropdown arrow rotation on focus for category-dropdown select */
+.category-dropdown select:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23006064" height="10" viewBox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  transition: background-image 0.3s ease;
+}
+.category-dropdown select:hover {
+  /* Reset rotation on hover */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23006064" height="10" viewBox="0 0 24 24" width="10" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+
+/* Add subtle animation for test-preview buttons */
+#confirmStartBtn:hover {
+  box-shadow: 0 0 15px #00bcd4;
+  transform: scale(1.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#closePreviewBtn:hover {
+  box-shadow: 0 0 15px #f44336;
+  transform: scale(1.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
