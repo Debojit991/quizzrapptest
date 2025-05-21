@@ -24,7 +24,7 @@ if (!isNaN(lastScore)) {
   currentDifficulty = "medium"; // default for first time
 }
 
-  const apiKey = "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"; // Replace with your actual API key
+  const apiKey = "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"; // Replace with your actual API key
   const model = "llama-3.3-70b-versatile"; // Replace with your model name if different
 
   const prompt = `Generate ${num} multiple-choice questions with 4 options each on the topic "${topic}".
